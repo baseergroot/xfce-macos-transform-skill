@@ -2,7 +2,7 @@
 name: xfce-macos-transform
 description: >
   Generate a full or partial XFCE-to-macOS customization workflow, including either a copy-paste prompt,
-  a ready-to-run bash script, or live tuning commands. Use when users ask to make XFCE look like macOS,
+  a generated bash script, or live tuning commands. Use when users ask to make XFCE look like macOS,
   request macOS-style theming/rice, or need fixes for panel/layout/font/menu issues after applying themes.
   Preserve existing menu entries and shortcut launchers by default unless the user explicitly asks to replace them.
 ---
@@ -11,7 +11,7 @@ description: >
 
 Provide one of these outputs:
 - Codex/AI prompt for another agent.
-- Ready-to-run bash script.
+- Generated bash script.
 - Live command sequence for in-session fixes.
 
 ## Workflow
@@ -44,12 +44,11 @@ Provide one of these outputs:
 ## References
 
 - For component implementation details, read `references/components.md`.
-- For a direct runnable baseline script, reuse or adapt `scripts/xfce-macos-transform.sh`.
 
 ## Output Conventions
 
-- If output is a script, write to `./outputs/xfce-macos-transform.sh`.
+- If output is a script, generate it in the current working directory.
 - Include run instructions:
-  - `chmod +x ./outputs/xfce-macos-transform.sh`
-  - `./outputs/xfce-macos-transform.sh`
+  - `chmod +x xfce-macos-transform.sh`
+  - `./xfce-macos-transform.sh`
 - Always warn the user to log out/in after panel/theme changes.
