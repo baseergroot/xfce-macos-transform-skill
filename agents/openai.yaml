@@ -1,0 +1,4 @@
+interface:
+  display_name: "XFCE macOS Transform"
+  short_description: "Build and tune macOS-style XFCE desktops safely"
+  default_prompt: "Use $xfce-macos-transform to generate a safe XFCE macOS-style setup that preserves my existing menu shortcuts unless I ask to replace them."
